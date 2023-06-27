@@ -21,7 +21,7 @@ $loadingOverlay-animDur: 2.5s;
   }
 }
 
-.loadingOverlay {
+.true-skeleton {
   filter: blur(2px) grayscale(1);
   cursor: wait;
   pointer-events: none;
@@ -40,11 +40,4 @@ $loadingOverlay-animDur: 2.5s;
     background-size: 250% 100%;
     animation: gradient $loadingOverlay-animDur ease-in-out infinite;
   }
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 150px);
-  justify-content: space-between;
-  gap: 20px;
 }
