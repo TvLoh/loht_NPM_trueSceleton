@@ -1,1 +1,50 @@
-/* You can add global styles to this file, and also import other style files */
+$loadingOverlay-colorPrimary: rgba(242, 243, 244, 100);
+$loadingOverlay-colorSecondary: rgba(220, 222, 225, 100);
+
+$loadingOverlay-deg: 100deg;
+$loadingOverlay-bgSize: 50%;
+$loadingOverlay-animDur: 2.5s;
+
+@keyframes gradient {
+  0% {
+    background-position: 100% 100%;
+  }
+  10% {
+    background-position: 100% 100%;
+  }
+
+  90% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.loadingOverlay {
+  filter: blur(2px) grayscale(1);
+  cursor: wait;
+  pointer-events: none;
+  &::after {
+    content: '';
+    position: absolute;
+    filter: blur(2px) grayscale(1);
+    opacity: 0.2;
+    cursor: wait;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    background: black linear-gradient($loadingOverlay-deg, $loadingOverlay-colorPrimary 0%, $loadingOverlay-colorPrimary 45%, $loadingOverlay-colorSecondary 49%, $loadingOverlay-colorSecondary 51%, $loadingOverlay-colorPrimary 55%, $loadingOverlay-colorPrimary 100%, $loadingOverlay-colorPrimary);
+    background-size: 250% 100%;
+    animation: gradient $loadingOverlay-animDur ease-in-out infinite;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 150px);
+  justify-content: space-between;
+  gap: 20px;
+}
