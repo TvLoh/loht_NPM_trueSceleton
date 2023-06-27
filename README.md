@@ -11,4 +11,3 @@ After that, you can use the class true-skeleton in your projekt.
 <div class="true-skeleton">
   some content to overlay
 </div>
-\```
