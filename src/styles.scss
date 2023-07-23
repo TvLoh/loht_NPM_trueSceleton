@@ -1,9 +1,11 @@
-$loadingOverlay-colorPrimary: rgba(242, 243, 244, 100);
-$loadingOverlay-colorSecondary: rgba(220, 222, 225, 100);
+$ts-color-primary: rgba(242, 243, 244, 100) !default;
+$ts-color-secondary: rgba(220, 222, 225, 100) !default;
+$ts-grayscale: 1 !default;
+$ts-blur: 2px !default;
 
-$loadingOverlay-deg: 100deg;
-$loadingOverlay-bgSize: 50%;
-$loadingOverlay-animDur: 2.5s;
+$ts-degree: 100deg !default;
+$ts-background-size: 250% !default; //depenting on the boxwidth and degree the size must be stretched
+$ts-animation-duration: 2.5s !default;
 
 @keyframes gradient {
   0% {
@@ -22,13 +24,13 @@ $loadingOverlay-animDur: 2.5s;
 }
 
 .true-skeleton {
-  filter: blur(2px) grayscale(1);
+  filter: blur($ts-blur) grayscale($ts-grayscale);
   cursor: wait;
   pointer-events: none;
   &::after {
     content: '';
     position: absolute;
-    filter: blur(2px) grayscale(1);
+    filter: blur($ts-blur) grayscale($ts-grayscale);
     opacity: 0.2;
     cursor: wait;
     top: 0;
@@ -36,8 +38,8 @@ $loadingOverlay-animDur: 2.5s;
     right: 0;
     bottom: 0;
     z-index: 1000;
-    background: black linear-gradient($loadingOverlay-deg, $loadingOverlay-colorPrimary 0%, $loadingOverlay-colorPrimary 45%, $loadingOverlay-colorSecondary 49%, $loadingOverlay-colorSecondary 51%, $loadingOverlay-colorPrimary 55%, $loadingOverlay-colorPrimary 100%, $loadingOverlay-colorPrimary);
+    background: black linear-gradient($ts-degree, $ts-color-primary 0%, $ts-color-primary 45%, $ts-color-secondary 49%, $ts-color-secondary 51%, $ts-color-primary 55%, $ts-color-primary 100%, $ts-color-primary);
     background-size: 250% 100%;
-    animation: gradient $loadingOverlay-animDur ease-in-out infinite;
+    animation: gradient $ts-animation-duration ease-in-out infinite;
   }
 }

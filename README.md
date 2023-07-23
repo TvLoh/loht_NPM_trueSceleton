@@ -12,3 +12,14 @@ After that, you can use the class true-skeleton in your projekt.
 <div class="true-skeleton">
   some content to overlay
 </div>
+
+
+```scss
+$ts-color-primary: rgba(242, 243, 244, 100);
+$ts-color-secondary: rgba(220, 222, 225, 100);
+$ts-grayscale: 1;
+$ts-blur: 2px;
+
+$ts-degree: 100deg;
+$ts-background-size: 250%; //depenting on the boxwidth and degree the size must be stretched
+$ts-animation-duration: 2.5s;
