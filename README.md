@@ -16,8 +16,8 @@ After that, you can use the class true-skeleton in your projekt.
 
 It is possible to adjust individual parameters for setting the overlay.
 
-```scss
 styles.scss:
+```scss
 /* You can add global styles to this file, and also import other style files */
 $ts-color-primary: red;
 $ts-color-secondary: blue;
