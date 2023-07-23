@@ -12,14 +12,20 @@ After that, you can use the class true-skeleton in your projekt.
 <div class="true-skeleton">
   some content to overlay
 </div>
+```
 
+It is possible to adjust individual parameters for setting the overlay.
 
 ```scss
-$ts-color-primary: rgba(242, 243, 244, 100);
-$ts-color-secondary: rgba(220, 222, 225, 100);
-$ts-grayscale: 1;
-$ts-blur: 2px;
+styles.scss:
+/* You can add global styles to this file, and also import other style files */
+$ts-color-primary: red;
+$ts-color-secondary: blue;
+$ts-grayscale: 0 ;
+$ts-blur: 0;
 
 $ts-degree: 100deg;
 $ts-background-size: 250%; //depenting on the boxwidth and degree the size must be stretched
-$ts-animation-duration: 2.5s;
+$ts-animation-duration: 5s;
+
+@import 'node_modules/loht-true-skeleton/src/styles.scss';
