@@ -12,5 +12,15 @@
   "dependencies": {
     "@angular/animations": "^14.3.0"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "keywords": [
+    "npm",
+    "skeleton",
+    "loading",
+    "indikator",
+    "spinner",
+    "overlay",
+    "action",
+    "request"
+  ]
 }
